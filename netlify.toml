@@ -1,0 +1,33 @@
+[build]
+  functions = "functions"
+  publish = "frontend/build"
+
+[dev]
+  functions = "functions"
+  publish = "frontend/build"
+  port = 3000
+
+[[redirects]]
+  from = "/api/health"
+  to = "/.netlify/functions/health"
+  status = 200
+
+[[redirects]]
+  from = "/api/products"
+  to = "/.netlify/functions/products"
+  status = 200
+
+[[redirects]]
+  from = "/api/upload-analyze"
+  to = "/.netlify/functions/upload-analyze"
+  status = 200
+
+[[redirects]]
+  from = "/api/create-listing"
+  to = "/.netlify/functions/create-listing"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
